@@ -93,7 +93,7 @@ function Navbar({ width }: { width?: string }) {
           </Link>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', columnGap: "3px" }}>
-          <Link to={"/about"} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to={"/servicesprojects"} style={{ textDecoration: 'none', color: 'inherit' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', columnGap: {xs:"10px",sm:"10px"}, fontSize:{xs:19,sm:34,md:18} }}>
               <IoBriefcase style={{ color: 'gray' }} />
               <Typography sx={{ fontWeight: "500", fontFamily: 'poppins', color: "gray", fontSize: {xs:18,sm:33,md:18} }}>
