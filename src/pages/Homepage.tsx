@@ -12,22 +12,20 @@ function Homepage() {
   };
 
   return (
-    <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
-      {/* Menu Icon for small and medium screens */}
+    <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>      
       <Box
         sx={{
           position: "absolute",
           top: 20,
           right: 20,
           display: { xs: "block", sm: "block", md: "none" },
-          zIndex: 1300, // Ensures it's always visible
+          zIndex: 1300,
         }}
         onClick={toggleDrawer(!open)}
       >
         <MenuIcon fontSize="large" />
       </Box>
 
-      {/* Sidebar Navbar (hidden on xs & sm, visible on md & lg) */}
       <Grid
         item
         sx={{
@@ -39,29 +37,26 @@ function Homepage() {
         <Navbar width="20vw"/>
       </Grid>
 
-      {/* Drawer for Navbar on small screens */}
       <Drawer 
         anchor="left" 
         open={open} 
-        onClose={toggleDrawer(false)}  // Now it properly closes when clicking outside
+        onClose={toggleDrawer(false)} 
         sx={{
           "& .MuiDrawer-paper": {
             backgroundColor: "pink",
-            width: { xs: "71vw", sm: "71vw", md: "71vw" }, // Adjust width for different screens
+            width: { xs: "71vw", sm: "71vw", md: "71vw" },
             height: "100vh",
           },
         }}
       >
-        {/* Full-width Box to fit Navbar inside Drawer */}
         <Box 
           sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }} 
-          onClick={(e) => e.stopPropagation()} // Prevents accidental closing when clicking inside
+          onClick={(e) => e.stopPropagation()} 
         >
           <Navbar width="71vw"/>
         </Box>
       </Drawer>
 
-      {/* Main Content */}
       <Grid
         item
         sx={{
