@@ -43,7 +43,6 @@ function Homepage() {
         onClose={toggleDrawer(false)} 
         sx={{
           "& .MuiDrawer-paper": {
-            backgroundColor: "pink",
             width: { xs: "71vw", sm: "71vw", md: "71vw" },
             height: "100vh",
           },
