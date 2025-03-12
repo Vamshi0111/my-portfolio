@@ -13,7 +13,7 @@ function About() {
     };
 
     return (
-        <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
+        <Grid container sx={{ backgroundImage: "linear-gradient(to bottom, #ff9a9e, #a1c4fd)",height: "100vh", width: "100vw", display: "flex" }}>
             <Box
                 sx={{
                     position: "absolute",
