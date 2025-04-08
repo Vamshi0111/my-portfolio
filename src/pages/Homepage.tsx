@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import { Grid, Typography, Drawer, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "../assets/Fonts/poppins.css";
@@ -12,7 +12,7 @@ function Homepage() {
   };
 
   return (
-    <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>      
+    <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
       <Box
         sx={{
           position: "absolute",
@@ -23,7 +23,7 @@ function Homepage() {
         }}
         onClick={toggleDrawer(!open)}
       >
-        <MenuIcon fontSize="large" />
+        <MenuIcon fontSize="large" sx={{ color: 'black' }} />
       </Box>
 
       <Grid
@@ -34,13 +34,13 @@ function Homepage() {
           display: { xs: "none", sm: "none", md: "block" },
         }}
       >
-        <Navbar width="20vw"/>
+        <Navbar width="20vw" />
       </Grid>
 
-      <Drawer 
-        anchor="left" 
-        open={open} 
-        onClose={toggleDrawer(false)} 
+      <Drawer
+        anchor="left"
+        open={open}
+        onClose={toggleDrawer(false)}
         sx={{
           "& .MuiDrawer-paper": {
             width: { xs: "71vw", sm: "71vw", md: "71vw" },
@@ -48,11 +48,11 @@ function Homepage() {
           },
         }}
       >
-        <Box 
-          sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }} 
-          onClick={(e) => e.stopPropagation()} 
+        <Box
+          sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}
+          onClick={(e) => e.stopPropagation()}
         >
-          <Navbar width="71vw"/>
+          <Navbar width="71vw" />
         </Box>
       </Drawer>
 
