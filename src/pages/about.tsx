@@ -13,7 +13,7 @@ function About() {
     };
 
     return (
-        <Grid container sx={{ backgroundImage: "linear-gradient(to bottom, #ff9a9e, #a1c4fd)",height: "100vh", width: "100vw", display: "flex" }}>
+        <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100vh", width: "100vw", display: "flex" }}>
             <Box
                 sx={{
                     position: "absolute",
@@ -24,7 +24,7 @@ function About() {
                 }}
                 onClick={toggleDrawer(!open)}
             >
-                <MenuIcon fontSize="large" />
+                <MenuIcon fontSize="large" sx={{ color: 'black' }} />
             </Box>
 
             <Grid
@@ -60,7 +60,8 @@ function About() {
                 <Typography sx={{
                     fontSize: { xs: 18, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                     position: 'relative',
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    color: '#1e88e5'
                 }}>
                     About
                     <Box
@@ -76,11 +77,11 @@ function About() {
                     />
                 </Typography>
                 <Box sx={{ width: { sm: "77vw" } }}>
-                    <Typography sx={{ marginTop: { xs: 2, sm: 2, md: 2 }, fontFamily: 'poppins', fontSize: { xs: 11, sm: 17 } }}>
+                    <Typography sx={{ marginTop: { xs: 2, sm: 2, md: 2 }, fontFamily: 'poppins', fontSize: { xs: 11, sm: 17, md: 15 }, color: '#4f4f4f' }}>
                         As a Full-Stack Developer, I specialize in JavaScript, TypeScript, React, React-Native, Node.js, Express.js, and MongoDB/PostgreSQL. I design and develop responsive web applications, ensuring efficient API integrations and database management to deliver high-performance solutions.
                     </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', columnGap: { sm: 2 }, marginTop: { xs: 2, sm: 3 }, width: { xs: "76vw", sm: "77vw" } }}>
+                <Box sx={{ display: 'flex', columnGap: { sm: 2 }, marginTop: { xs: 2, sm: 3 }, width: { xs: "76vw", sm: "77vw" }, color: 'black' }}>
                     <Box
                         component="img"
                         src={Image}
@@ -90,34 +91,34 @@ function About() {
                         }}
                     />
                     <Box sx={{ width: { xs: '50vw', sm: '48vw' } }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: "500", width: { sm: '45vw' }, fontSize: { xs: 14, sm: 28 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontWeight: "500", width: { sm: '45vw' }, fontSize: { xs: 14, sm: 28 }, marginLeft: { xs: 1 },color:'#212121' }}>
                             Web & Mobile Developer | UI/UX Designer.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', marginTop: { sm: 1 }, fontSize: { xs: 11, sm: 18 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', marginTop: { sm: 1 }, fontSize: { xs: 11, sm: 18 }, marginLeft: { xs: 1 },color:'#4f4f4f' }}>
                             "Transforming ideas into seamless digital experiences. As a UI/UX Designer and Web & Mobile Developer, I craft intuitive interfaces and develop robust applications that enhance user engagement."
                         </Typography>
                     </Box>
                 </Box>
-                <Grid sx={{ display: 'flex', marginTop: { xs: 3, sm: 4,md:0 }, width: { sm: "77vw",md:"50vw" }, height: { md: '30vh' },marginLeft:{md:36} }}>
+                <Grid sx={{ display: 'flex', marginTop: { xs: 3, sm: 4, md: 0 }, width: { sm: "77vw", md: "50vw" }, height: { md: '30vh' }, marginLeft: { md: 36 } }}>
                     <Box sx={{ height: '100%', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md:'500' }, fontSize: { xs: 9.7, sm: 20 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 9.7, sm: 20, md: 17 }, color: 'black' }}>
                             Email : vamshichary117@gmail.com.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md: "500" }, fontSize: { xs: 11, sm: 20 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
                             Phone : 8523035382
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md: "500" }, fontSize: { xs: 11, sm: 20 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
                             City : Madhapur, HYD 500081.
                         </Typography>
                     </Box>
-                    <Box sx={{ height: '100%', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md: "500" }, fontSize: { xs: 11, sm: 20 } }}>
+                    <Box sx={{ height: '100%', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', marginLeft: { xs: 3 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
                             Degree : B.Tech Computer Science.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md: "500" }, fontSize: { xs: 11, sm: 20 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
                             Birthday : 04 Mar 2000
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: { md: "500" }, fontSize: { xs: 11, sm: 20 } }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
                             Freelance : Available
                         </Typography>
                     </Box>

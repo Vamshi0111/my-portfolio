@@ -46,7 +46,7 @@ function Contact() {
 
 
     return (
-        <Grid container sx={{ backgroundImage: "linear-gradient(to bottom, #ff9a9e, #a1c4fd)",height: "100vh", width: "100vw", display: "flex" }}>
+        <Grid container sx={{ backgroundColor:'#f4f6f8', height: "100vh", width: "100vw", display: "flex" }}>
             <Box
                 sx={{
                     position: "absolute",
@@ -57,7 +57,7 @@ function Contact() {
                 }}
                 onClick={toggleDrawer(!open)}
             >
-                <MenuIcon fontSize="large" />
+                <MenuIcon fontSize="large" sx={{ color: 'black' }} />
             </Box>
 
             <Grid
@@ -93,7 +93,8 @@ function Contact() {
                 <Typography sx={{
                     fontSize: { xs: 18, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                     position: 'relative',
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    color: '#1e88e5'
                 }}>
                     Contact
                     <Box
@@ -108,21 +109,21 @@ function Contact() {
                         }}
                     />
                 </Typography>
-                <Typography sx={{ fontFamily: 'poppins', marginTop: { xs: 2, sm:2,md: 2 },fontSize:{sm:24,md:18} }}>
+                <Typography sx={{ fontFamily: 'poppins', marginTop: { xs: 2, sm: 2, md: 2 }, fontSize: { sm: 24, md: 18 }, color: '#4f4f4f' }}>
                     Great things start with a simple conversation—let’s connect and build!
                 </Typography>
                 <Box sx={{ height: { md: "65vh" }, width: { md: "75vw" }, marginTop: { xs: 2, md: 6 } }}>
                     <Box
                         sx={{
                             // backgroundImage: "linear-gradient(to bottom, #ff9a9e, #a1c4fd)",
-                            height: { xs: '52vh',sm:'21%' ,md: "100%" },
-                            width: { xs:'100%', sm:'81%',md: "75%" },
+                            height: { xs: '52vh', sm: '21%', md: "100%" },
+                            width: { xs: '100%', sm: '81%', md: "75%" },
                             boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
                             gap: { md: 3 },
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "start",
-                            padding: { xs:2,sm:3,md: 3 },
+                            padding: { xs: 2, sm: 3, md: 3 },
                         }}
                     >
                         <Box
@@ -154,7 +155,7 @@ function Contact() {
                             <TextField
                                 sx={{
                                     flex: 1,
-                                    maxWidth: { xs: "100%",sm:'100%', md: "45%" }, // ✅ Full width on xs, 45% on md
+                                    maxWidth: { xs: "100%", sm: '100%', md: "45%" }, // ✅ Full width on xs, 45% on md
                                     "& input::placeholder": {
                                         color: "black",
                                         opacity: 0.7,
@@ -166,13 +167,13 @@ function Contact() {
                         </Box>
 
 
-                        <TextField sx={{ width: { xs: '100%',sm: "100%", md: "100%" }, mt: { xs: 2, md: 3 }, "& input::placeholder": { color: "black", opacity: 0.7, fontFamily: 'poppins' }, }} placeholder="Subject" />
+                        <TextField sx={{ width: { xs: '100%', sm: "100%", md: "100%" }, mt: { xs: 2, md: 3 }, "& input::placeholder": { color: "black", opacity: 0.7, fontFamily: 'poppins' }, }} placeholder="Subject" />
 
                         <TextField
                             sx={{
                                 width: { xs: "100%", sm: "100%", md: "100%" }, // Full width for all sizes
                                 height: { xs: "10vh", sm: "12vh", md: "15vh" }, // Different heights for each screen size
-                                mt: { xs: 2, sm: 2, md: 3 },
+                                mt: { xs: 2, sm: 2, md: 2 },
                                 "& .MuiInputBase-root": {
                                     fontFamily: "Poppins",
                                     fontSize: "16px",
@@ -190,9 +191,9 @@ function Contact() {
                         />
                         <Box component="form"
                             onSubmit={sendEmail}
-                            sx={{ backgroundColor: 'white', height: { md: '11vh' }, width: { xs:'26vw',sm:'13vw', md: "10vw" }, marginTop: { xs:3.5,md: 12 }, borderRadius: { xs:5,sm:5,md: 5 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                            sx={{ backgroundColor: '#43a047', height: { md: '11vh' }, width: { xs: '26vw', sm: '13vw', md: "10vw" }, marginTop: { xs: 3.5, md: 8 }, borderRadius: { xs: 5, sm: 5, md: 5 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                         >
-                            <Button sx={{ fontFamily: 'poppins' }}>
+                            <Button sx={{ fontFamily: 'poppins',color:'white' }}>
                                 Submit
                             </Button>
                         </Box>
