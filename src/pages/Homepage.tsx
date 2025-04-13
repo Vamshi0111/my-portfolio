@@ -153,9 +153,10 @@ function Homepage() {
             alignItems: 'center',
             justifyContent: 'center',
             padding: { xs: 1, sm: 1 },
-            position: 'absolute',
+            position: 'fixed',
             bottom: { xs: 0, sm: 0 },
             left: { xs: 0, sm: 0 },
+            zIndex: 1300
 
           }}>
             <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
