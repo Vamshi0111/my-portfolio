@@ -75,7 +75,7 @@ function Contact() {
                     <Navbar width="71vw" />
                 </Box>
             </Drawer>
-            <Grid item sx={{ width: '80%', paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs: 8, sm: 10, md: 2 } }}>
+            <Grid item sx={{ width: { xs: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs: 5, sm: 8, md: 2 } }}>
                 <Typography
                     sx={{
                         fontSize: { xs: 18, sm: 28 },
@@ -115,7 +115,7 @@ function Contact() {
                     onSubmit={sendEmail}
                     sx={{
                         mt: { xs: 3, sm: 4, md: 4 },
-                        width: { xs: '100%', sm: '90%', md: '70%' },
+                        width: { xs: '87%', sm: '90%', md: '70%' },
                         maxWidth: '800px',
                         boxShadow: 3,
                         padding: { xs: 2, sm: 3, md: 4 },

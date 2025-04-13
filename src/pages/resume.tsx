@@ -12,10 +12,10 @@ function Resume() {
     };
 
     return (
-        <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100%", display: "flex", minHeight: '100dvh', overflow: 'hidden' }}>
+        <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100%", display: "flex", minHeight: '100dvh', overflow: 'hidden', overflowY: 'auto' }}>
             <Box
                 sx={{
-                    position: "absolute",
+                    position: "fixed",
                     top: 20,
                     right: 20,
                     display: { xs: "block", sm: "block", md: "none" },
@@ -57,14 +57,15 @@ function Resume() {
                 </Box>
             </Drawer>
 
-            <Grid item sx={{ width: '80%', paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflowY: 'auto', height: '100vh' }}>
+            <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflowY: 'auto', height: '100vh', padding: { xs: 2, sm: 2 } }}>
                 <Typography sx={{
-                    fontSize: { xs: 20, sm: 28, md: 32 },
+                    fontSize: { xs: 20, sm: 28 },
                     fontFamily: 'poppins',
                     fontWeight: "500",
                     position: 'relative',
                     display: 'inline-block',
-                    color: '#1e88e5'
+                    color: '#1e88e5',
+                    marginTop: { xs: 3, sm: 6 }
                 }}>
                     Resume
                     <Box

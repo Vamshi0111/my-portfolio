@@ -1,4 +1,3 @@
-import Cropper from "react-easy-crop";
 
 const createImage = (url: string): Promise<HTMLImageElement> =>
   new Promise((resolve, reject) => {

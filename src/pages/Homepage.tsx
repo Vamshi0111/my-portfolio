@@ -40,7 +40,7 @@ function Homepage() {
     <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
       <Box
         sx={{
-          position: "absolute",
+          position: "fixed",
           top: 20,
           right: 20,
           display: { xs: "block", sm: "block", md: "none" },
@@ -48,7 +48,7 @@ function Homepage() {
         }}
         onClick={toggleDrawer(!open)}
       >
-        <MenuIcon fontSize="large" sx={{ color: 'black' }} />
+        <MenuIcon fontSize="large" sx={{ color: 'white' }} />
       </Box>
       <Grid
         item
@@ -68,6 +68,7 @@ function Homepage() {
           "& .MuiDrawer-paper": {
             width: { xs: "71vw", sm: "71vw", md: "71vw" },
             height: "100vh",
+            overflow: { xs: 'auto' }
           },
         }}
       >
@@ -91,15 +92,16 @@ function Homepage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          paddingLeft: { md: 3 }
+          paddingLeft: { xs: 1, sm: 2, md: 3 }
         }}
       >
         <Typography
           sx={{
             fontFamily: 'Poppins',
-            fontSize: { md: 50 },
-            fontWeight: { md: '600' },
-            color: 'white'
+            fontSize: { xs: 20, sm: 40, md: 50 },
+            fontWeight: { xs: '600', md: '600' },
+            color: 'white',
+            marginTop: { xs: 5, sm: 5 }
           }}
         >
           Vamshi Vadla
@@ -107,7 +109,7 @@ function Homepage() {
         <Box
           sx={{
             mt: 2,
-            fontSize: { xs: 20, md: 28 },
+            fontSize: { xs: 20, sm: 24, md: 28 },
             fontWeight: 500,
             fontFamily: "Poppins",
             color: "white",
@@ -122,14 +124,36 @@ function Homepage() {
               sx={{
                 position: "absolute",
                 bottom: -4,
-                left: `${displayText.indexOf(currentWord) * -75}px`,
-                width: `${subIndex * 9}px`,
+                left: {
+                  xs: `${displayText.indexOf(currentWord) * -54}px`,  // Adjust for xs
+                  sm: `${displayText.indexOf(currentWord) * -64}px`,  // Adjust for sm
+                  md: `${displayText.indexOf(currentWord) * -75}px`,  // Default for md and larger
+                },
+                width: {
+                  xs: `${subIndex * 6}px`,  // Adjust for xs
+                  sm: `${subIndex * 7}px`,  // Adjust for sm
+                  md: `${subIndex * 9}px`,  // Default for md and larger
+                },
                 height: "2px",
                 backgroundColor: "primary.main",
                 transition: "width 0.1s linear",
               }}
             />
           </Box>
+        </Box>
+        <Box sx={{
+          display: { xs: 'block', sm: 'block', md: 'none' },
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: { xs: 0 },
+          position: 'fixed',
+          bottom: { xs: 60, sm: 90 },
+          left: { xs: 100, sm: 245 },
+
+        }}>
+          <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
+            Note: Navigate screens through Hamburger in Top right
+          </Typography>
         </Box>
       </Grid>
     </Grid>

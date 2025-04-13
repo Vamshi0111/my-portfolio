@@ -64,12 +64,13 @@ function Servicesprojects() {
                     <Navbar width="100%" />
                 </Box>
             </Drawer>
-            <Grid item sx={{ width: '80vw', paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflow: 'auto' }}>
+            <Grid item sx={{ width: { xs: '100%', md: '80%' }, paddingTop: { sm: 5, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflow: 'auto', padding: { xs: 2 } }}>
                 <Typography sx={{
-                    fontSize: { xs: 18, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
+                    fontSize: { xs: 20, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                     position: 'relative',
                     display: 'inline-block',
-                    color: '#1e88e5'
+                    color: '#1e88e5',
+                    marginTop: { xs: 3 }
                 }}>
                     Services
                     <Box
@@ -93,10 +94,10 @@ function Servicesprojects() {
                         "Here’s how I can help you bring your ideas to life—from concept to deployment, across web and mobile platforms.”
                     </Typography>
                 </Box>
-                <Box sx={{ width: '100%', height: { xs: '30%', sm: '47%', md: '70%' }, marginTop: { xs: 1, sm: 2, md: 2 }, flexWrap: 'wrap', display: 'flex', rowGap: 2, justifyContent: 'space-between', boxSizing: 'border-box', overflow: { xs: 'auto' } }}>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                <Box sx={{ width: { sm: '100%', md: '100%' }, height: { xs: '30%', sm: '47%', md: '70%' }, marginTop: { xs: 1, sm: 2, md: 2 }, flexWrap: 'wrap', display: 'flex', rowGap: 2, justifyContent: 'space-between', boxSizing: 'border-box', overflow: { xs: 'auto' } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <IoIosDesktop color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <IoIosDesktop color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
                             <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' } }}>
@@ -111,12 +112,12 @@ function Servicesprojects() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <HiOutlineDevicePhoneMobile color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <HiOutlineDevicePhoneMobile color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
-                            <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' }, paddingTop: { sm: 2, md: 0 } }}>
+                            <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' }, paddingTop: { sm: 0, md: 0 } }}>
                                 <Typography sx={{ fontFamily: 'poppins', fontWeight: '500', color: 'black', fontSize: { xs: 10, sm: 20, md: 18 } }}>
                                     Mobile Development
                                 </Typography>
@@ -128,9 +129,9 @@ function Servicesprojects() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <FaPalette color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <FaPalette color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
                             <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' } }}>
@@ -145,9 +146,9 @@ function Servicesprojects() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <FaUserLock color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <FaUserLock color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
                             <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' } }}>
@@ -162,9 +163,9 @@ function Servicesprojects() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <RiToolsLine color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <RiToolsLine color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
                             <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' } }}>
@@ -179,9 +180,9 @@ function Servicesprojects() {
                             </Box>
                         </Box>
                     </Box>
-                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '34%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
+                    <Box sx={{ backgroundColor: 'white', width: { xs: '48%', sm: '48.5%', md: '32%' }, borderRadius: 2, height: { xs: '30%', sm: '32%', md: '45%' }, boxShadow: '0px 3px 6px rgba(0,0,0,0.2)', border: "1px solid #e0e0e0", boxSizing: 'border-box', overflow: 'hidden', display: 'flex', paddingRight: { xs: 0.5, md: 0 } }}>
                         <Box sx={{ height: '100%', width: '25%', display: 'flex', justifyContent: 'center', paddingTop: { xs: 2, md: 2 }, fontSize: { md: 24 } }}>
-                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '80%', sm: '62%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <IoMdCloudy color="white" /> </Box>
+                            <Box sx={{ borderRadius: '50%', height: { xs: '14%', md: '20%' }, width: { xs: '60%', sm: '51%', md: '50%' }, backgroundColor: '#2AA6E0', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: { sm: 25 } }}>    <IoMdCloudy color="white" /> </Box>
                         </Box>
                         <Box sx={{ width: "75%", height: '90%', overflow: 'hidden' }}>
                             <Box sx={{ height: { xs: '21%', sm: '19%', md: '27%' }, display: 'flex', justifyContent: 'start', alignItems: { xs: 'end', md: 'flex-end' } }}>
@@ -199,7 +200,7 @@ function Servicesprojects() {
                 </Box>
                 <Grid item sx={{ width: '100%', paddingTop: { xs: 2, sm: 3, md: 2 }, marginTop: { xs: 2.5, sm: 0, md: 0 }, overflow: 'hidden' }}>
                     <Typography sx={{
-                        fontSize: { xs: 18, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
+                        fontSize: { xs: 20, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                         position: 'relative',
                         display: 'inline-block',
                         color: '#1e88e5'

@@ -56,9 +56,9 @@ function About() {
                     <Navbar width="71vw" />
                 </Box>
             </Drawer>
-            <Grid item sx={{ width: '80vw', paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 } }}>
+            <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 } }}>
                 <Typography sx={{
-                    fontSize: { xs: 18, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
+                    fontSize: { xs: 20, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                     position: 'relative',
                     display: 'inline-block',
                     color: '#1e88e5'
@@ -91,10 +91,10 @@ function About() {
                         }}
                     />
                     <Box sx={{ width: { xs: '50vw', sm: '48vw' } }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontWeight: "500", width: { sm: '45vw' }, fontSize: { xs: 14, sm: 28 }, marginLeft: { xs: 1 },color:'#212121' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontWeight: "500", width: { sm: '45vw' }, fontSize: { xs: 14, sm: 28 }, marginLeft: { xs: 1 }, color: '#212121' }}>
                             Web & Mobile Developer | UI/UX Designer.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', marginTop: { sm: 1 }, fontSize: { xs: 11, sm: 18 }, marginLeft: { xs: 1 },color:'#4f4f4f' }}>
+                        <Typography sx={{ fontFamily: 'poppins', marginTop: { sm: 1 }, fontSize: { xs: 11, sm: 18 }, marginLeft: { xs: 1 }, color: '#4f4f4f' }}>
                             "Transforming ideas into seamless digital experiences. As a UI/UX Designer and Web & Mobile Developer, I craft intuitive interfaces and develop robust applications that enhance user engagement."
                         </Typography>
                     </Box>
