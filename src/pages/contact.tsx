@@ -44,7 +44,8 @@ function Contact() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.2 }}
         >
-            <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100vw",minHeight:'100dvh',overflow:'hidden' }}>
+            <Box sx={{ paddingTop: 'env(safe-area-inset-top)' }}>
+            <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100vw",minHeight:'100vh',overflow:'hidden' }}>
                 <Box
                     sx={{
                         position: "absolute",
@@ -82,7 +83,7 @@ function Contact() {
                         <Navbar width="71vw" />
                     </Box>
                 </Drawer>
-                <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs: 5, sm: 8, md: 2 } }}>
+                <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { sm: 8, md: 2 } }}>
                     <Typography
                         sx={{
                             fontSize: { xs: 20, sm: 28 },
@@ -225,6 +226,7 @@ function Contact() {
                     </Box>
                 </Grid>
             </Grid>
+            </Box>
         </motion.div>
     );
 }
