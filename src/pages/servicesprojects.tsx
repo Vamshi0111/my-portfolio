@@ -10,6 +10,7 @@ import { RiToolsLine } from "react-icons/ri";
 import Footer from "../components/footer";
 import MessengerImg from '../assets/Images/Messenger.png';
 import ShipEaseImg from '../assets/Images/ShipEase.png';
+import { motion } from "framer-motion";
 
 
 function Servicesprojects() {
@@ -20,6 +21,12 @@ function Servicesprojects() {
     };
 
     return (
+        <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.2 }}
+        >
         <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100vh", width: "100vw", display: "flex", flexDirection: { md: 'column' }, overflow: 'auto', minHeight: { xs: '100dvh', md: 0 } }}>
             <Box
                 sx={{
@@ -264,6 +271,7 @@ function Servicesprojects() {
                 <Footer />
             </Grid>
         </Grid>
+        </motion.div>
     )
 }
 
