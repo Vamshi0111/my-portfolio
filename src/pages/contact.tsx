@@ -91,8 +91,7 @@ function Contact() {
                                 fontWeight: '500',
                                 color: '#1e88e5',
                                 position: 'relative',
-                                display: 'inline-block',
-                                // marginTop: { xs: 5 }                                
+                                display: 'inline-block',                          
                             }}
                         >
                             Contact

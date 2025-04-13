@@ -160,7 +160,7 @@ function Homepage() {
 
           }}>
             <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
-              Note: Navigate screens through Hamburger in Top right
+              Note: Navigate screens through Hamburger in top right
             </Typography>
           </Box>
         </Grid>
