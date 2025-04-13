@@ -4,6 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "../assets/Fonts/poppins.css";
 import Navbar from "../components/navbar";
 import LandscapeImg from '../assets/Images/Landing.jpg';
+import { motion } from "framer-motion";
 
 function Homepage() {
   const [open, setOpen] = useState(false);
@@ -37,126 +38,133 @@ function Homepage() {
   const currentWord = texts[textIndex].split(" ")[3];
 
   return (
-    <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
-      <Box
-        sx={{
-          position: "fixed",
-          top: 20,
-          right: 20,
-          display: { xs: "block", sm: "block", md: "none" },
-          zIndex: 1300,
-        }}
-        onClick={toggleDrawer(!open)}
-      >
-        <MenuIcon fontSize="large" sx={{ color: 'white' }} />
-      </Box>
-      <Grid
-        item
-        sx={{
-          height: "100vh",
-          width: { xs: "0", sm: "0", md: "25vw", lg: "20vw" },
-          display: { xs: "none", sm: "none", md: "block" },
-        }}
-      >
-        <Navbar width="20vw" />
-      </Grid>
-      <Drawer
-        anchor="left"
-        open={open}
-        onClose={toggleDrawer(false)}
-        sx={{
-          "& .MuiDrawer-paper": {
-            width: { xs: "71vw", sm: "71vw", md: "71vw" },
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.2 }}
+    >
+      <Grid container sx={{ height: "100vh", width: "100vw", display: "flex" }}>
+        <Box
+          sx={{
+            position: "fixed",
+            top: 20,
+            right: 20,
+            display: { xs: "block", sm: "block", md: "none" },
+            zIndex: 1300,
+          }}
+          onClick={toggleDrawer(!open)}
+        >
+          <MenuIcon fontSize="large" sx={{ color: 'white' }} />
+        </Box>
+        <Grid
+          item
+          sx={{
             height: "100vh",
-            overflow: { xs: 'auto' }
-          },
-        }}
-      >
-        <Box
-          sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Navbar width="71vw" />
-        </Box>
-      </Drawer>
-      <Grid
-        item
-        sx={{
-          backgroundImage: `url(${LandscapeImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: "lightblue",
-          height: "100vh",
-          width: { xs: "100vw", sm: "100vw", md: "75vw", lg: "80vw" },
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          paddingLeft: { xs: 1, sm: 2, md: 3 }
-        }}
-      >
-        <Typography
-          sx={{
-            fontFamily: 'Poppins',
-            fontSize: { xs: 20, sm: 40, md: 50 },
-            fontWeight: { xs: '600', md: '600' },
-            color: 'white',
-            marginTop: { xs: 5, sm: 5 }
+            width: { xs: "0", sm: "0", md: "25vw", lg: "20vw" },
+            display: { xs: "none", sm: "none", md: "block" },
           }}
         >
-          Vamshi Vadla
-        </Typography>
-        <Box
+          <Navbar width="20vw" />
+        </Grid>
+        <Drawer
+          anchor="left"
+          open={open}
+          onClose={toggleDrawer(false)}
           sx={{
-            mt: 2,
-            fontSize: { xs: 20, sm: 24, md: 28 },
-            fontWeight: 500,
-            fontFamily: "Poppins",
-            color: "white",
-            position: "relative",
-            display: "inline-block",
+            "& .MuiDrawer-paper": {
+              width: { xs: "71vw", sm: "71vw", md: "71vw" },
+              height: "100vh",
+              overflow: { xs: 'auto' }
+            },
           }}
         >
-          <Box component="span" sx={{ position: 'relative', display: 'inline-block' }}>
-            {displayText}
-            <Box
-              component="span"
-              sx={{
-                position: "absolute",
-                bottom: -4,
-                left: {
-                  xs: `${displayText.indexOf(currentWord) * -54}px`,  // Adjust for xs
-                  sm: `${displayText.indexOf(currentWord) * -64}px`,  // Adjust for sm
-                  md: `${displayText.indexOf(currentWord) * -75}px`,  // Default for md and larger
-                },
-                width: {
-                  xs: `${subIndex * 6}px`,  // Adjust for xs
-                  sm: `${subIndex * 7}px`,  // Adjust for sm
-                  md: `${subIndex * 9}px`,  // Default for md and larger
-                },
-                height: "2px",
-                backgroundColor: "primary.main",
-                transition: "width 0.1s linear",
-              }}
-            />
+          <Box
+            sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Navbar width="71vw" />
           </Box>
-        </Box>
-        <Box sx={{
-          display: { xs: 'block', sm: 'block', md: 'none' },
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginTop: { xs: 0 },
-          position: 'fixed',
-          bottom: { xs: 60, sm: 90 },
-          left: { xs: 100, sm: 245 },
-
-        }}>
-          <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
-            Note: Navigate screens through Hamburger in Top right
+        </Drawer>
+        <Grid
+          item
+          sx={{
+            backgroundImage: `url(${LandscapeImg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: "lightblue",
+            height: "100vh",
+            width: { xs: "100vw", sm: "100vw", md: "75vw", lg: "80vw" },
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            paddingLeft: { xs: 1, sm: 2, md: 3 }
+          }}
+        >
+          <Typography
+            sx={{
+              fontFamily: 'Poppins',
+              fontSize: { xs: 20, sm: 40, md: 50 },
+              fontWeight: { xs: '600', md: '600' },
+              color: 'white',
+              marginTop: { xs: 5, sm: 5 }
+            }}
+          >
+            Vamshi Vadla
           </Typography>
-        </Box>
+          <Box
+            sx={{
+              mt: 2,
+              fontSize: { xs: 20, sm: 24, md: 28 },
+              fontWeight: 500,
+              fontFamily: "Poppins",
+              color: "white",
+              position: "relative",
+              display: "inline-block",
+            }}
+          >
+            <Box component="span" sx={{ position: 'relative', display: 'inline-block' }}>
+              {displayText}
+              <Box
+                component="span"
+                sx={{
+                  position: "absolute",
+                  bottom: -4,
+                  left: {
+                    xs: `${displayText.indexOf(currentWord) * -54}px`,  // Adjust for xs
+                    sm: `${displayText.indexOf(currentWord) * -64}px`,  // Adjust for sm
+                    md: `${displayText.indexOf(currentWord) * -75}px`,  // Default for md and larger
+                  },
+                  width: {
+                    xs: `${subIndex * 6}px`,  // Adjust for xs
+                    sm: `${subIndex * 7}px`,  // Adjust for sm
+                    md: `${subIndex * 9}px`,  // Default for md and larger
+                  },
+                  height: "2px",
+                  backgroundColor: "primary.main",
+                  transition: "width 0.1s linear",
+                }}
+              />
+            </Box>
+          </Box>
+          <Box sx={{
+            display: { xs: 'block', sm: 'block', md: 'none' },
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: { xs: 0 },
+            position: 'fixed',
+            bottom: { xs: 60, sm: 90 },
+            left: { xs: 100, sm: 245 },
+
+          }}>
+            <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
+              Note: Navigate screens through Hamburger in Top right
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
-    </Grid>
+    </motion.div>
   );
 }
 

@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Navbar from "../components/navbar";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { motion } from "framer-motion";
 
 function Resume() {
     const [open, setOpen] = useState(false);
@@ -12,6 +13,12 @@ function Resume() {
     };
 
     return (
+        <motion.div
+            initial={{ opacity: 0, x: 100 }}     // 👈 Animate entry
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}       // 👈 Animate exit
+            transition={{ duration: 0.2 }}
+        >
         <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100%", display: "flex", minHeight: '100dvh', overflow: 'hidden', overflowY: 'auto' }}>
             <Box
                 sx={{
@@ -196,6 +203,7 @@ function Resume() {
                 </Box>
             </Grid>
         </Grid>
+        </motion.div>
     );
 }
 
