@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes, HashRouter as Router } from "react-router-dom";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Homepage from "./pages/Homepage";
@@ -7,10 +7,9 @@ import Footer from "./components/footer";
 import Servicesprojects from "./pages/servicesprojects";
 import Resume from "./pages/resume";
 
-
 function App() {
     return (
-        <Router basename="/my-portfolio">
+        <Router>
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/about" element={<About />} />
@@ -21,6 +20,7 @@ function App() {
                 <Route path="/Footer" element={<Footer />} />
             </Routes>
         </Router>
-    )
+    );
 }
+
 export default App;

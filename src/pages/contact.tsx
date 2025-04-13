@@ -44,7 +44,7 @@ function Contact() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.2 }}
         >
-            <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100vw", minHeight: '100dvh', overflowY: 'auto', overflowX: 'hidden' }}>
+            <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100vw",minHeight:{xs:'100dvh',sm:'100dvh'}, overflowY: 'auto', overflowX: 'hidden' }}>
                 <Box
                     sx={{
                         position: "absolute",

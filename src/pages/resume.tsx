@@ -14,9 +14,9 @@ function Resume() {
 
     return (
         <motion.div
-            initial={{ opacity: 0, x: 100 }}     // 👈 Animate entry
+            initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}       // 👈 Animate exit
+            exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.2 }}
         >
         <Grid container sx={{ backgroundColor: '#f4f6f8', height: "100%", width: "100%", display: "flex", minHeight: '100dvh', overflow: 'hidden', overflowY: 'auto' }}>
