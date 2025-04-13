@@ -101,24 +101,24 @@ function About() {
                 </Box>
                 <Grid sx={{ display: 'flex', marginTop: { xs: 3, sm: 4, md: 0 }, width: { sm: "77vw", md: "50vw" }, height: { md: '30vh' }, marginLeft: { md: 36 } }}>
                     <Box sx={{ height: '100%', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 9.7, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 9.7, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             Email : vamshichary117@gmail.com.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             Phone : 8523035382
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             City : Madhapur, HYD 500081.
                         </Typography>
                     </Box>
                     <Box sx={{ height: '100%', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'space-around', marginLeft: { xs: 3 } }}>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             Degree : B.Tech Computer Science.
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             Birthday : 04 Mar 2000
                         </Typography>
-                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: 'black' }}>
+                        <Typography sx={{ fontFamily: 'poppins', fontSize: { xs: 11, sm: 20, md: 17 }, color: '#4f4f4f' }}>
                             Freelance : Available
                         </Typography>
                     </Box>
