@@ -146,16 +146,13 @@ function Contact() {
                                         fontFamily: "Poppins",
                                     },
                                 }}
-                                fullWidth // Ensures it adapts properly
+                                fullWidth
                                 placeholder="Your Name"
                             />
-
-
-                            {/* Second TextField - Your Email */}
                             <TextField
                                 sx={{
                                     flex: 1,
-                                    maxWidth: { xs: "100%", sm: '100%', md: "45%" }, // ✅ Full width on xs, 45% on md
+                                    maxWidth: { xs: "100%", sm: '100%', md: "45%" },
                                     "& input::placeholder": {
                                         color: "black",
                                         opacity: 0.7,
@@ -171,8 +168,8 @@ function Contact() {
 
                         <TextField
                             sx={{
-                                width: { xs: "100%", sm: "100%", md: "100%" }, // Full width for all sizes
-                                height: { xs: "10vh", sm: "12vh", md: "15vh" }, // Different heights for each screen size
+                                width: { xs: "100%", sm: "100%", md: "100%" }, 
+                                height: { xs: "10vh", sm: "12vh", md: "15vh" }, 
                                 mt: { xs: 2, sm: 2, md: 2 },
                                 "& .MuiInputBase-root": {
                                     fontFamily: "Poppins",
@@ -187,11 +184,10 @@ function Contact() {
                             placeholder="Message"
                             multiline
                             minRows={isXsScreen ? 2 : isSmScreen ? 4 : isMdScreen ? 6 : 1}
-                        // ✅ xs: 2 rows, sm: 4 rows, md: 6 rows, others: 1 row
                         />
                         <Box component="form"
                             onSubmit={sendEmail}
-                            sx={{ backgroundColor: '#43a047', height: { md: '11vh' }, width: { xs: '26vw', sm: '13vw', md: "10vw" }, marginTop: { xs: 3.5, md: 8 }, borderRadius: { xs: 5, sm: 5, md: 5 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                            sx={{ backgroundColor: '#2AA6E0', height: { md: '11vh' }, width: { xs: '26vw', sm: '13vw', md: "10vw" }, marginTop: { xs: 3.5, md: 8 }, borderRadius: { xs: 5, sm: 5, md: 5 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
                         >
                             <Button sx={{ fontFamily: 'poppins',color:'white' }}>
                                 Submit
