@@ -152,10 +152,10 @@ function Homepage() {
             display: { xs: 'block', sm: 'block', md: 'none' },
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: { xs: 0 },
+            padding: { xs: 1, sm: 1 },
             position: 'absolute',
-            bottom: { xs: 60, sm: 90 },
-            left: { xs: 100, sm: 245 },
+            bottom: { xs: 0, sm: 0 },
+            left: { xs: 0, sm: 0 },
 
           }}>
             <Typography sx={{ color: 'white', fontSize: { xs: 8, sm: 13 }, fontFamily: 'poppins' }}>
