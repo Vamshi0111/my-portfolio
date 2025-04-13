@@ -153,7 +153,7 @@ function Homepage() {
             alignItems: 'center',
             justifyContent: 'center',
             marginTop: { xs: 0 },
-            position: 'fixed',
+            position: 'absolute',
             bottom: { xs: 60, sm: 90 },
             left: { xs: 100, sm: 245 },
 
