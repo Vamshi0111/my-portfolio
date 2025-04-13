@@ -61,7 +61,7 @@ function Resume() {
                 <Typography sx={{
                     fontSize: { xs: 20, sm: 28, md: 32 },
                     fontFamily: 'poppins',
-                    fontWeight: 500,
+                    fontWeight: "500",
                     position: 'relative',
                     display: 'inline-block',
                     color: '#1e88e5'
