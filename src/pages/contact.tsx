@@ -83,7 +83,7 @@ function Contact() {
                             <Navbar width="71vw" />
                         </Box>
                     </Drawer>
-                    <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { sm: 3, md: 2 } }}>
+                    <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs:5 ,sm: 3, md: 2 } }}>
                         <Typography
                             sx={{
                                 fontSize: { xs: 20, sm: 28 },
@@ -92,7 +92,7 @@ function Contact() {
                                 color: '#1e88e5',
                                 position: 'relative',
                                 display: 'inline-block',
-                                marginTop: { xs: 5 }                                
+                                // marginTop: { xs: 5 }                                
                             }}
                         >
                             Contact
