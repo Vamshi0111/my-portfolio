@@ -2,10 +2,13 @@ import { Box, Grid, Typography, IconButton } from "@mui/material";
 import '../assets/Fonts/poppins.css';
 import { useRef } from "react";
 import Image from "../assets/Images/Profile.jpeg";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaSkype, FaXTwitter, FaHouse, FaFileArrowDown } from "react-icons/fa6";
+import { FaInstagram, FaHouse, FaWhatsapp, FaFileArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { IoBriefcase, IoPerson } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import { FiFacebook } from "react-icons/fi";
+import { AiOutlineSkype } from "react-icons/ai";
+import { CiLinkedin } from "react-icons/ci";
 
 function Navbar({ width }: { width?: string }) {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -23,15 +26,15 @@ function Navbar({ width }: { width?: string }) {
         </Typography>
         <input ref={fileInputRef} type="file" accept="image/*" hidden />
 
-        <Box sx={{ width: { xs: '60vw', sm: '35vw', md: '25vw', lg: "17vw" }, display: 'flex', justifyContent: "space-between" }}>
+        <Box sx={{ width: { xs: '60vw', sm: '35vw', md: '25vw', lg: "17vw" }, display: 'flex', justifyContent: "space-between", alignItems: 'center' }}>
           <Box sx={{ backgroundColor: '#1D242C', borderRadius: 50 }}>
-            <IconButton component="a" href="https://x.com/vamshichary117" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 19, sm: 28, md: 18, lg: 17 } }}>
-              <FaXTwitter />
+            <IconButton component="a" href="https://wa.me/918523035382" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 19, sm: 28, md: 18, lg: 17 } }}>
+              <FaWhatsapp />
             </IconButton>
           </Box>
           <Box sx={{ backgroundColor: '#1D242C', borderRadius: 50 }}>
             <IconButton component="a" href="https://www.facebook.com/vamshi.chary.92351" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 19, sm: 27, md: 17, lg: 17 } }}>
-              <FaFacebookF />
+              <FiFacebook />
             </IconButton>
           </Box>
           <Box sx={{ backgroundColor: '#1D242C', borderRadius: 50 }}>
@@ -40,13 +43,13 @@ function Navbar({ width }: { width?: string }) {
             </IconButton>
           </Box>
           <Box sx={{ backgroundColor: '#1D242C', borderRadius: 50 }}>
-            <IconButton component="a" href="https://join.skype.com/invite/qfGtIZ170RZL" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 20, sm: 29, md: 17, lg: 18 } }}>
-              <FaSkype />
+            <IconButton component="a" href="https://join.skype.com/invite/qfGtIZ170RZL" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 22, sm: 32, md: 21, lg: 21 } }}>
+              <AiOutlineSkype />
             </IconButton>
           </Box>
           <Box sx={{ backgroundColor: '#1D242C', borderRadius: 50 }}>
-            <IconButton component="a" href="https://www.linkedin.com/in/vamshi-vadla/" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 20, sm: 29, md: 18, lg: 18 } }} >
-              <FaLinkedinIn />
+            <IconButton component="a" href="https://www.linkedin.com/in/vamshi-vadla/" sx={{ color: "white", "&:hover": { color: 'red' }, fontSize: { xs: 21, sm: 32, md: 18, lg: 21 } }} >
+              <CiLinkedin />
             </IconButton>
           </Box>
         </Box>
@@ -84,7 +87,7 @@ function Navbar({ width }: { width?: string }) {
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', columnGap: "3px" }}>
           <Link to={"/contact"} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', columnGap: { xs: "10px", sm: "20px" }, fontSize: { xs: 19, sm: 34, md: 20 } }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', columnGap: { xs: "10px", sm: "20px", md: '18px' }, fontSize: { xs: 19, sm: 34, md: 19 }, padding: 0 }}>
               <MdEmail style={{ color: "gray" }} />
               <Typography sx={{ fontWeight: "500", fontFamily: 'poppins', color: "gray", fontSize: { xs: 18, sm: 30, md: 18 } }}>
                 Contact
