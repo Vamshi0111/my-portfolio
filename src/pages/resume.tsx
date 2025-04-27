@@ -1,16 +1,58 @@
-import { Box, Drawer, Typography } from "@mui/material";
+import { Box, Drawer, Typography, Skeleton } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Navbar from "../components/navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 
 function Resume() {
     const [open, setOpen] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+            const isFirstLoad = localStorage.getItem("isFirstLoad")
+    
+            if (!isFirstLoad) {
+                localStorage.setItem("isFirstLoad", "false");
+                setLoading(true);
+    
+                setTimeout(() => {
+                    setLoading(false);
+                }, 1000)
+            } else {
+                setLoading(false);
+            }
+        }, []);
 
     const toggleDrawer = (state: boolean) => () => {
         setOpen(state);
     };
+
+    if (loading) {
+        return(
+            <Grid container sx={{ height: "100vh", width: "100vw" }}>
+                <Grid
+                    item
+                    xs={12}
+                    sx={{
+                        backgroundColor: "#f0f0f0",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Skeleton variant="text" width={200} height={50} />
+                    <Skeleton variant="text" width={150} height={40} sx={{ mt: 2 }} />
+                    <Skeleton
+                        variant="rectangular"
+                        height="60vh"
+                        sx={{ mt: 4, width: { xs: "90%", md: "90%" } }}
+                    />
+                </Grid>
+            </Grid>
+        )
+    }
 
     return (
         <motion.div
@@ -64,7 +106,7 @@ function Resume() {
                 </Box>
             </Drawer>
 
-            <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingTop: { xs: 5, sm: 8, md: 2 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflowY: 'auto', height: '100vh', padding: { xs: 2, sm: 2 } }}>
+            <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingTop: { xs: 5, sm: 8, md: 0 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { sm: 3 }, overflowY: 'auto', height: '100vh', padding: { xs: 2, sm: 2 } }}>
                 <Typography sx={{
                     fontSize: { xs: 20, sm: 28 },
                     fontFamily: 'poppins',
@@ -72,7 +114,7 @@ function Resume() {
                     position: 'relative',
                     display: 'inline-block',
                     color: '#1e88e5',
-                    marginTop: { xs: 3, sm: 6 }
+                    marginTop: { xs: 3, sm: 6, md:2 }
                 }}>
                     Resume
                     <Box

@@ -1,17 +1,59 @@
-import { Box, Drawer, Grid, Typography } from "@mui/material";
+import { Box, Drawer, Grid, Typography, Skeleton } from "@mui/material";
 import Navbar from "../components/navbar";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from '../assets/Images/Photo.jpg'
-import { useState } from "react";
+import ProfileImg from '../assets/Images/Photo.jpg'
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 
 function About() {
     const [open, setOpen] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const isFirstLoad = localStorage.getItem("isFirstLoad")
+
+        if (!isFirstLoad) {
+            localStorage.setItem("isFirstLoad", "false");
+            setLoading(true);
+
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000)
+        } else {
+            setLoading(false);
+        }
+    }, []);
 
     const toggleDrawer = (state: boolean) => () => {
         setOpen(state);
     };
+
+    if (loading) {
+        return (
+            <Grid container sx={{ height: "100vh", width: "100vw" }}>
+                <Grid
+                    item
+                    xs={12}
+                    sx={{
+                        backgroundColor: "#f0f0f0",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Skeleton variant="text" width={200} height={50} />
+                    <Skeleton variant="text" width={150} height={40} sx={{ mt: 2 }} />
+                    <Skeleton
+                        variant="rectangular"
+                        height="60vh"
+                        sx={{ mt: 4, width: { xs: "90%", md: "90%" } }}
+                    />
+                </Grid>
+            </Grid>
+        )
+    }
 
     return (
         <motion.div
@@ -89,14 +131,25 @@ function About() {
                         </Typography>
                     </Box>
                     <Box sx={{ display: 'flex', columnGap: { sm: 2 }, marginTop: { xs: 2, sm: 3 }, width: { xs: "76vw", sm: "77vw" }, color: 'black' }}>
-                        <Box
-                            component="img"
-                            src={Image}
-                            alt="Photo.jpg"
-                            sx={{
-                                height: { xs: 94, sm: 205, md: 265 }
-                            }}
-                        />
+                        {loading ? (
+                            <Skeleton
+                                variant="rectangular"
+                                sx={{
+                                    height: { xs: 94, sm: 205, md: 265 },
+                                    width: { xs: 94, sm: 205, md: 265 },
+                                    borderRadius: 2,
+                                }}
+                            />
+                        ) : (
+                            <Box
+                                component="img"
+                                src={ProfileImg}
+                                alt="Photo.jpg"
+                                sx={{
+                                    height: { xs: 94, sm: 205, md: 265 }
+                                }}
+                            />
+                        )}
                         <Box sx={{ width: { xs: '50vw', sm: '48vw' } }}>
                             <Typography sx={{ fontFamily: 'poppins', fontWeight: "500", width: { sm: '45vw' }, fontSize: { xs: 14, sm: 28 }, marginLeft: { xs: 1 }, color: '#212121' }}>
                                 Web & Mobile Developer | UI/UX Designer.
