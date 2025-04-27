@@ -14,7 +14,7 @@ function Navbar({ width }: { width?: string }) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <Grid sx={{ backgroundColor: '#1D242C', height: '100vh', width: width || '20vw', display: 'flex', flexDirection: 'column', rowGap: "30px", justifyContent: 'center', alignItems: 'center' }}>
+    <Grid sx={{ backgroundColor: '#1D242C', height: '100vh', width: width || '20vw', display: 'flex', flexDirection: 'column', rowGap: "30px", justifyContent: 'center', alignItems: 'center', overflowY: { xs: 'auto' } }}>
       <Box sx={{
         display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', rowGap: "10px"
       }}>
