@@ -1,12 +1,28 @@
-import { Box, Drawer, Grid, Typography, useTheme, useMediaQuery, TextField, Button } from "@mui/material";
+import { Box, Drawer, Grid, Typography, useTheme, useMediaQuery, TextField, Button, Skeleton } from "@mui/material";
 import Navbar from "../components/navbar";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 
 function Contact() {
     const [open, setOpen] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const isFirstLoad = localStorage.getItem("isFirstLoad")
+
+        if (!isFirstLoad) {
+            localStorage.setItem("isFirstLoad", "false");
+            setLoading(true);
+
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000)
+        } else {
+            setLoading(false);
+        }
+    }, []);
 
     const toggleDrawer = (state: boolean) => () => {
         setOpen(state);
@@ -36,6 +52,32 @@ function Contact() {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.only("xs"));
     const isSmScreen = useMediaQuery(theme.breakpoints.only("sm"));
+
+    if (loading) {
+        return (
+            <Grid container sx={{ height: "100vh", width: "100vw" }}>
+                <Grid
+                    item
+                    xs={12}
+                    sx={{
+                        backgroundColor: "#f0f0f0",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}
+                >
+                    <Skeleton variant="text" width={200} height={50} />
+                    <Skeleton variant="text" width={150} height={40} sx={{ mt: 2 }} />
+                    <Skeleton
+                        variant="rectangular"
+                        height="60vh"
+                        sx={{ mt: 4, width: { xs: "90%", md: "90%" } }}
+                    />
+                </Grid>
+            </Grid>
+        )
+    }
 
     return (
         <motion.div
@@ -83,7 +125,7 @@ function Contact() {
                             <Navbar width="71vw" />
                         </Box>
                     </Drawer>
-                    <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs:5 ,sm: 3, md: 2 } }}>
+                    <Grid item sx={{ width: { xs: '100%', sm: '100%', md: '80%' }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingTop: { xs: 5, sm: 3, md: 2 } }}>
                         <Typography
                             sx={{
                                 fontSize: { xs: 20, sm: 28 },
@@ -91,7 +133,7 @@ function Contact() {
                                 fontWeight: '500',
                                 color: '#1e88e5',
                                 position: 'relative',
-                                display: 'inline-block',                          
+                                display: 'inline-block',
                             }}
                         >
                             Contact
