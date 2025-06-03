@@ -16,7 +16,7 @@ function Footer({ width }: { width?: { xs?: string, sm?: string, md?: string, lg
             paddingTop: { xs: 2, sm: 0, md: 0 }
         }}>
             <Box sx={{ display: "flex", fontSize: { xs: 13 }, alignItems: 'center' }}>
-                <LiaCopyrightSolid style={{ marginRight: 4 }} />
+                <LiaCopyrightSolid style={{ marginRight: 4, color:'black' }} />
                 <Typography sx={{
                     fontWeight: { sm: '300' },
                     fontFamily: 'poppins',
@@ -33,7 +33,7 @@ function Footer({ width }: { width?: { xs?: string, sm?: string, md?: string, lg
                     fontSize: { xs: 9, sm: 12 },
                     color: 'black'
                 }}>
-                    Designed and Developed with 💙 by Vamshi.
+                    Designed and Developed with 💙 by Vamshi...
                 </Typography>
             </Box>
         </Grid>

@@ -113,7 +113,7 @@ function Servicesprojects() {
                         <Navbar width="100%" />
                     </Box>
                 </Drawer>
-                <Grid item sx={{ width: { xs: '100%', md: '80%' }, paddingTop: { xs: 2, sm: 5, md: 0 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { xs: 2, sm: 3 }, paddingBottom: { xs: 0, sm: 0, md: 0 }, overflow: 'auto' }}>
+                <Grid item sx={{ width: { xs: '100%', md: '80%' }, paddingTop: { xs: 2, sm: 5, md: 0 }, paddingLeft: { xs: 2, sm: 3, md: 2 }, paddingRight: { xs: 2, sm: 3 }, paddingBottom: { xs: 0, sm: 0, md: 0 }, overflowY: 'auto', overflowX:'hidden' }}>
                     <Typography sx={{
                         fontSize: { xs: 20, sm: 28 }, fontFamily: 'poppins', fontWeight: '500',
                         position: 'relative',
